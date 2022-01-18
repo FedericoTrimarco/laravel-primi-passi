@@ -13,6 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// HOME
 Route::get('/', function () {
-    return view('welcome');
+    return view('home', [
+        'title' => 'HELLO WORLD',
+    ]);
 });
+
+//ABOUT
+Route::get('/about-lello', function () {
+    return view('about', [
+        'title' => 'ABOUT',
+    ]);
+})->name('about');
